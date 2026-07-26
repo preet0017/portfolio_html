@@ -1,0 +1,374 @@
+/* ================================================
+   RESPONSIVE STYLES
+   Breakpoints: 1400px, 1200px, 992px, 768px,
+                576px, 480px, 360px
+   ================================================ */
+
+/* ================================================
+   1400px - Large Desktops
+   ================================================ */
+@media (max-width: 1400px) {
+  :root {
+    --max-width: 1100px;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+}
+
+/* ================================================
+   1200px - Standard Desktops
+   ================================================ */
+@media (max-width: 1200px) {
+  :root {
+    --max-width: 960px;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+  }
+
+  .hero-typing {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .experience-grid {
+    gap: 36px;
+  }
+
+  .contact-grid {
+    gap: 40px;
+  }
+}
+
+/* ================================================
+   992px - Tablets Landscape
+   ================================================ */
+@media (max-width: 992px) {
+  :root {
+    --max-width: 720px;
+    --section-padding: 80px 0;
+  }
+
+  /* Navbar - show hamburger */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  /* Hero - stack columns */
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: left;
+  }
+
+  .hero-name {
+    font-size: 2.6rem;
+  }
+
+  .code-window {
+    max-width: 520px;
+  }
+
+  /* About - stack */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image-wrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Experience - stack */
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Contact - stack */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* ================================================
+   768px - Tablets Portrait
+   ================================================ */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 70px 0;
+    --nav-height: 64px;
+  }
+
+  html {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 36px;
+  }
+
+  .section-title::after {
+    width: 150px;
+  }
+
+  .hero-name {
+    font-size: 2.3rem;
+  }
+
+  .hero-typing {
+    font-size: 1.15rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .code-window-body {
+    font-size: 0.82rem;
+    padding: 18px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrapper {
+    padding: 28px;
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================================================
+   576px - Mobile Landscape
+   ================================================ */
+@media (max-width: 576px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-typing {
+    font-size: 1.05rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .hero-greeting {
+    font-size: 0.9rem;
+  }
+
+  .section-title::after {
+    width: 80px;
+  }
+
+  .about-image-wrapper {
+    max-width: 240px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 24px 20px;
+  }
+
+  .timeline-item {
+    padding: 18px;
+    margin-bottom: 24px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    left: -30px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .mobile-menu {
+    width: 85%;
+  }
+
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+
+  .contact-socials {
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ================================================
+   480px - Mobile Portrait
+   ================================================ */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 1.75rem;
+  }
+
+  .hero-typing {
+    font-size: 0.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .code-window-body {
+    font-size: 0.75rem;
+    padding: 14px 12px;
+  }
+
+  .code-line::before {
+    width: 20px;
+    margin-right: 12px;
+    font-size: 0.72rem;
+  }
+
+  .code-indent-1 {
+    padding-left: 16px;
+  }
+
+  .code-indent-2 {
+    padding-left: 32px;
+  }
+
+  .project-image {
+    height: 170px;
+  }
+
+  .project-content {
+    padding: 18px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-link {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-form-wrapper {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+    flex-wrap: wrap;
+  }
+
+  .section-title::after {
+    width: 60px;
+  }
+
+  .experience-column h3 {
+    font-size: 1.15rem;
+  }
+}
+
+/* ================================================
+   360px - Small Phones
+   ================================================ */
+@media (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .hero-name {
+    font-size: 1.6rem;
+  }
+
+  .hero-typing {
+    font-size: 0.88rem;
+  }
+
+  .code-window-body {
+    font-size: 0.7rem;
+    padding: 12px 10px;
+  }
+
+  .skill-chip {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .timeline-item {
+    padding: 14px;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .about-image-wrapper {
+    max-width: 200px;
+  }
+}

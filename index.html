@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preet Bansal — Full-Stack Web Developer, Backend Engineer, and AI/ML Enthusiast based in Ahmedabad. Building modern, scalable, and intelligent web solutions." />
+  <meta name="keywords" content="Preet Bansal, Web Developer, Backend Developer, AI ML, Portfolio, Ahmedabad" />
+  <meta name="author" content="Preet Bansal" />
+  <title>Preet Bansal | Web Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAVBAR
+       ================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-logo">&lt;<span>Preet Bansal</span>/&gt;</a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" class="mobile-link active">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- ================================================
+       HERO SECTION
+       ================================================ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <!-- Left Column: Text -->
+      <div class="hero-content fade-left">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-name">Preet Bansal</h1>
+        <div class="hero-typing">
+          <span class="static-text">They call me</span>
+          <span class="dynamic-text" id="typing-text"></span>
+        </div>
+        <p class="hero-description">
+          A passionate developer crafting modern web experiences, robust backend systems, and intelligent AI-driven solutions. I love turning complex problems into elegant, user-friendly products.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">
+            Get In Touch
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Code Window -->
+      <div class="code-window fade-right">
+        <div class="code-window-header">
+          <span class="code-window-dot"></span>
+          <span class="code-window-dot"></span>
+          <span class="code-window-dot"></span>
+          <span class="code-window-title">success.js</span>
+        </div>
+        <div class="code-window-body">
+          <div class="code-line">
+            <span><span class="code-keyword">async</span> <span class="code-keyword">function</span> <span class="code-function">success</span><span class="code-parens">()</span> <span class="code-bracket">{</span></span>
+          </div>
+          <div class="code-line code-empty"></div>
+          <div class="code-line">
+            <span class="code-indent-1"><span class="code-keyword">await</span> <span class="code-method">work</span><span class="code-parens">()</span></span>
+          </div>
+          <div class="code-line code-empty"></div>
+          <div class="code-line">
+            <span class="code-indent-1"><span class="code-keyword">await</span> <span class="code-method">learn</span><span class="code-parens">()</span></span>
+          </div>
+          <div class="code-line code-empty"></div>
+          <div class="code-line">
+            <span class="code-indent-1"><span class="code-keyword">await</span> <span class="code-method">persist</span><span class="code-parens">()</span></span>
+          </div>
+          <div class="code-line code-empty"></div>
+          <div class="code-line">
+            <span class="code-indent-1"><span class="code-return">return</span> <span class="code-new">new</span> <span class="code-class">Success</span><span class="code-parens">()</span></span>
+          </div>
+          <div class="code-line code-empty"></div>
+          <div class="code-line">
+            <span><span class="code-bracket">}</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       ABOUT SECTION
+       ================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title fade-up"><span class="number">01.</span> About Me</h2>
+
+      <div class="about-grid">
+        <!-- Left: Image -->
+        <div class="fade-left">
+          <div class="about-image-wrapper">
+            <img src="assets/images/profile.jpg" alt="Preet Bansal - Developer" class="about-image" />
+          </div>
+          <div class="about-info-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="about-info-card-text">
+              <h4>Location</h4>
+              <p>Ahmedabad, Gujarat</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="about-text fade-right">
+          <p>
+            Hello! I'm <span class="highlight">Preet Bansal</span>, a developer and tech enthusiast based in
+            <span class="highlight">Ahmedabad, Gujarat</span>. I enjoy building things that live on the internet — whether
+            that's websites, applications, or anything in between. My goal is to always build products that provide
+            pixel-perfect, performant experiences.
+          </p>
+          <p>
+            My journey into web development started back when I first discovered the magic of turning lines of code into
+            interactive experiences. Since then, I've had the privilege of working on diverse projects ranging from
+            full-stack web applications to machine learning models that solve real-world problems.
+          </p>
+          <p>
+            I specialize in building robust <span class="highlight">backend systems</span>, crafting beautiful
+            <span class="highlight">frontend interfaces</span>, and leveraging <span class="highlight">AI/ML</span> to
+            create intelligent solutions. When I'm not coding, you'll find me exploring new technologies, contributing to
+            open-source projects, or learning something completely new.
+          </p>
+          <p>
+            I believe in writing clean, maintainable code that scales. Every project I take on is an opportunity to push
+            boundaries and deliver something exceptional. I'm always excited to take on new challenges and collaborate
+            with like-minded individuals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SKILLS SECTION
+       ================================================ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-up"><span class="number">02.</span> Skills</h2>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card fade-up hover-scale">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Frontend</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS3</span>
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">React.js</span>
+            <span class="skill-chip">Next.js</span>
+            <span class="skill-chip">Tailwind CSS</span>
+            <span class="skill-chip">Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card fade-up hover-scale">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+          </div>
+          <h3>Backend</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Express.js</span>
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">Django</span>
+            <span class="skill-chip">Flask</span>
+            <span class="skill-chip">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-card fade-up hover-scale">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+          </div>
+          <h3>Database</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">MongoDB</span>
+            <span class="skill-chip">PostgreSQL</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">Firebase</span>
+            <span class="skill-chip">Supabase</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card fade-up hover-scale">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Tools</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">Git</span>
+            <span class="skill-chip">GitHub</span>
+            <span class="skill-chip">Docker</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">Postman</span>
+            <span class="skill-chip">Figma</span>
+            <span class="skill-chip">Vercel</span>
+          </div>
+        </div>
+
+        <!-- AI/ML -->
+        <!-- <div class="skill-card fade-up hover-scale">
+          <div class="skill-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v2a4 4 0 0 0 8 0v-2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/></svg>
+          </div>
+          <h3>AI / ML</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">TensorFlow</span>
+            <span class="skill-chip">PyTorch</span>
+            <span class="skill-chip">Scikit-learn</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">OpenCV</span>
+            <span class="skill-chip">NLP</span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       PROJECTS SECTION
+       ================================================ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title fade-up"><span class="number">03.</span> Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card fade-up hover-scale">
+          <div class="project-image-wrapper">
+            <img src="assets/images/project-1.png" alt="Kitsta" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3>Kitsta</h3>
+            <p>
+              A modern high-protein meal delivery platform designed to simplify healthy eating with an intuitive user experience, responsive design, and seamless ordering workflow.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>TailwindCss</span>
+              <span>Vite</span>
+              <span>Formspree</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/preet0017/Kitsta-Landing-Page" class="project-link github" aria-label="View GitHub repository" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+              </a>
+              <a href="https://kitsta.com/" class="project-link demo" aria-label="View live demo" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card fade-up hover-scale">
+          <div class="project-image-wrapper">
+            <img src="assets/images/project-2.png" alt="Prakruti Roots" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3>Prakruti Roots</h3>
+            <p>
+              An e-commerce platform for handcrafted natural skincare products, offering a clean shopping experience with secure authentication, product management, and a scalable backend.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Supabase</span>
+              <span>Vite</span>
+              <span>TailwindCss</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/preet0017/Prakruti-Roots" class="project-link github" aria-label="View GitHub repository" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+              </a>
+              <a href="https://prakrutiroot.web.app/" class="project-link demo" aria-label="View live demo" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card fade-up hover-scale">
+          <div class="project-image-wrapper">
+            <img src="assets/images/project-3.png" alt="Medicare" class="project-image" />
+          </div>
+          <div class="project-content">
+            <h3>Medicare</h3>
+            <p>
+              A healthcare management system that streamlines patient records, appointment scheduling, and medical services through a secure, responsive, and user-friendly interface.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>TailwindCss</span>
+              <span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <!-- <a href="#" class="project-link github" aria-label="View GitHub repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="project-link demo" aria-label="View live demo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                Live Demo
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       EXPERIENCE SECTION
+       ================================================ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title fade-up"><span class="number">04.</span> Experience &amp; Education</h2>
+
+      <div class="experience-grid">
+        <!-- Left: Experience -->
+        <div class="experience-column fade-left">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Experience
+          </h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">2023</span>
+              <h4 class="timeline-title">Team Member</h4>
+              <p class="timeline-subtitle">Smart India Hackathon</p>
+              <p class="timeline-description">
+                Proudly contributed to Smart India Hackathon 2023 under Problem Statement SIH1401, where our team showcased strong skills in software development and innovative problem-solving.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2024</span>
+              <h4 class="timeline-title">Team Leader</h4>
+              <p class="timeline-subtitle">Smart India Hackathon</p>
+              <p class="timeline-description">
+                Led the team in Smart India Hackathon 2024 under Problem Statement SIH1630, guiding the development of impactful tech solutions with a focus on innovation, leadership, and collaboration.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2025</span>
+              <h4 class="timeline-title">Team Leader</h4>
+              <p class="timeline-subtitle">Smart India Hackathon</p>
+              <p class="timeline-description">
+                Led a team in Smart India Hackathon 2025 under Problem Statement SIH25066, driving the end-to-end development of an innovative and scalable solution. Coordinated planning, technical implementation, and team collaboration to ensure impactful and efficient problem-solving within tight deadlines.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2026</span>
+              <h4 class="timeline-title">Team Member</h4>
+              <p class="timeline-subtitle">LJ Innovation Village</p>
+              <p class="timeline-description">
+                Contributed to the development of “Smart Glove – Mouse”, a wearable device that enables users to control the computer cursor through natural hand movements. The glove integrates embedded buttons for left and right clicks, eliminating the need for a traditional physical mouse.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Education -->
+        <div class="experience-column fade-right">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2v-5"/></svg>
+            Education
+          </h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">2022</span>
+              <h4 class="timeline-title">Passed Higher Secondary</h4>
+              <p class="timeline-subtitle">Schooling</p>
+              <p class="timeline-description">
+                Passed schooling from Ahmedabad, Gujarat
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2022 — 2025</span>
+              <h4 class="timeline-title">Diploma</h4>
+              <p class="timeline-subtitle">LJ Polytechnic</p>
+              <p class="timeline-description">
+                I’ve successfully completed my Diploma in Computer Engineering from LJ Polytechnic, Ahmedabad, Gujarat.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2025 - 2028</span>
+              <h4 class="timeline-title">B.E. in Computer Science & Engineering</h4>
+              <p class="timeline-subtitle">New LJ Institute of Engineering & Technology</p>
+              <p class="timeline-description">
+                Currently pursuing my Bachelor of Engineering in Computer Science & Engineering from New LJIET , Ahmedabad, Gujarat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT SECTION
+       ================================================ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-up"><span class="number">05.</span> Contact</h2>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info fade-left">
+          <h3>Get In Touch</h3>
+          <p>
+            I'm always open to new opportunities, collaborations, or just a friendly conversation about technology. Whether you have a project idea, a question, or just want to say hi — my inbox is always open!
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <span>preetbansal017@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>+91 8160367411</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span>Ahmedabad, Gujarat, India</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="contact-socials">
+            <!-- GitHub -->
+            <a href="https://github.com/preet0017" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/preetbansal/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="https://x.com/preetp0017" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrapper fade-right">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" placeholder="Your name" autocomplete="name" />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" placeholder="Subject" />
+                <span class="form-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" placeholder="your@email.com" autocomplete="email" />
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="5" placeholder="Write your message here..."></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="form-submit">
+              Send Message
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+            </button>
+            <div class="form-success" id="form-success">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Message sent successfully! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><a href="#home">&lt;<span>Preet Bansal</span>/&gt;</a></div>
+      <p class="footer-text">Designed &amp; Developed by Preet Bansal</p>
+      <p class="footer-copyright">Copyright &copy; 2026</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

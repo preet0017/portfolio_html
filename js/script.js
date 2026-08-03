@@ -92,39 +92,41 @@
   /* ================================================
      TYPING ANIMATION
      ================================================ */
-  const typingTexts = ['Web Developer', 'Backend Developer', 'AI/ML Enthusiast', 'Freelancer'];
-  let textIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
+  // Start typing animation (only if element exists)
+  if (typingElement) {
+    const typingTexts = ['Web Developer', 'Backend Developer', 'AI/ML Enthusiast', 'Freelancer'];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
 
-  function typeText() {
-    const currentText = typingTexts[textIndex];
+    function typeText() {
+      const currentText = typingTexts[textIndex];
 
-    if (isDeleting) {
-      typingElement.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-      typingSpeed = 50;
-    } else {
-      typingElement.textContent = currentText.substring(0, charIndex + 1);
-      charIndex++;
-      typingSpeed = 100;
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        typingSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typingTexts.length;
+        typingSpeed = 400; // Pause before next word
+      }
+
+      setTimeout(typeText, typingSpeed);
     }
 
-    if (!isDeleting && charIndex === currentText.length) {
-      isDeleting = true;
-      typingSpeed = 2000; // Pause at end
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      textIndex = (textIndex + 1) % typingTexts.length;
-      typingSpeed = 400; // Pause before next word
-    }
-
-    setTimeout(typeText, typingSpeed);
+    typeText();
   }
-
-  // Start typing animation
-  typeText();
 
   /* ================================================
      SCROLL REVEAL - Intersection Observer

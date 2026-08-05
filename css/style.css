@@ -164,40 +164,71 @@ textarea {
    CSS ANIMATIONS
    ================================================ */
 
+/* Hidden Checkbox for Mobile Toggle */
+.menu-toggle {
+  display: none;
+}
+
+/* ================================================
+   CSS ANIMATIONS
+   ================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Fade Up */
 .fade-up {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Fade Left */
 .fade-left {
   opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-left.visible {
-  opacity: 1;
-  transform: translateX(0);
+  animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Fade Right */
 .fade-right {
   opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.fade-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+@supports (animation-timeline: view()) {
+  .fade-up, .fade-left, .fade-right {
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
 }
 
 /* Hover Scale */
@@ -222,13 +253,11 @@ textarea {
   transition: var(--transition);
   display: flex;
   align-items: center;
-}
-
-.navbar.scrolled {
-  background: rgba(17, 34, 64, 0.85);
+  background: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.05);
 }
 
 .navbar .container {
@@ -307,16 +336,17 @@ textarea {
   margin: 4px 0;
 }
 
-.hamburger.active span:nth-child(1) {
+/* Checkbox Toggle for Hamburger */
+#menu-toggle:checked ~ nav .hamburger span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active span:nth-child(2) {
+#menu-toggle:checked ~ nav .hamburger span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
 
-.hamburger.active span:nth-child(3) {
+#menu-toggle:checked ~ nav .hamburger span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
@@ -341,8 +371,22 @@ textarea {
   box-shadow: -10px 0 30px rgba(2, 12, 27, 0.7);
 }
 
-.mobile-menu.open {
+.mobile-menu label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Checkbox Toggle for Mobile Menu & Overlay */
+#menu-toggle:checked ~ .mobile-menu {
   right: 0;
+}
+
+#menu-toggle:checked ~ .mobile-overlay {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .mobile-menu a {
@@ -350,6 +394,8 @@ textarea {
   font-size: 1.1rem;
   color: var(--secondary);
   transition: var(--transition);
+  display: inline-block;
+  padding: 8px 16px;
 }
 
 .mobile-menu a:hover,
@@ -368,10 +414,7 @@ textarea {
   z-index: 998;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-
-.mobile-overlay.open {
-  opacity: 1;
+  cursor: pointer;
 }
 
 /* ================================================
@@ -417,32 +460,15 @@ textarea {
   align-items: center;
   gap: 10px;
   font-size: 1.5rem;
-  color: var(--secondary);
+  color: var(--accent);
   min-height: 44px;
+  font-family: var(--font-mono);
+  font-weight: 600;
 }
 
 .hero-typing .static-text {
-  font-weight: 500;
-}
-
-.hero-typing .dynamic-text {
-  color: var(--accent);
   font-weight: 600;
-  font-family: var(--font-mono);
   position: relative;
-}
-
-.hero-typing .dynamic-text::after {
-  content: '|';
-  display: inline-block;
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
-  color: var(--accent);
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
 }
 
 .hero-description {
@@ -1011,15 +1037,19 @@ textarea {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 24px;
 }
 
@@ -1038,16 +1068,33 @@ textarea {
 .contact-details {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   margin-top: 8px;
+  width: 100%;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   color: var(--secondary);
   font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.contact-item a {
+  color: inherit;
   transition: var(--transition);
 }
 
@@ -1074,6 +1121,7 @@ textarea {
 
 .contact-socials {
   display: flex;
+  justify-content: center;
   gap: 14px;
   margin-top: 16px;
 }
